@@ -1,0 +1,186 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 30
+
+
+    defaultConfig {
+        applicationId "org.carlistingapp.autolist"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 8
+        multiDexEnabled true
+        versionName "8.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        android.defaultConfig.vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true  // shrink
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true  // shrink
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures{
+        dataBinding = true
+        // for view binding :
+        // viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    buildToolsVersion '30.0.3'
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //Kotlin Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9-native-mt-2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9-native-mt-2'
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+    //New Material Design
+    implementation 'com.google.android.material:material:1.3.0'
+
+
+    //version defined
+    def nav_version = "2.3.0"
+
+    //Retrofit and Gson
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+
+    //Kodein Dependency Injection
+    implementation "org.kodein.di:kodein-di-generic-jvm:6.2.1"
+    implementation "org.kodein.di:kodein-di-framework-android-x:6.2.1"
+
+    //Android Room
+    implementation "androidx.room:room-runtime:2.2.6"
+    implementation "androidx.room:room-ktx:2.2.6"
+    kapt "androidx.room:room-compiler:2.2.6"
+
+    //Android Navigation Architecture
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.3"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.3"
+
+    implementation 'com.xwray:groupie:2.3.0'
+    implementation 'com.xwray:groupie-kotlin-android-extensions:2.3.0'
+    implementation 'com.xwray:groupie-databinding:2.3.0'
+
+    implementation "androidx.preference:preference-ktx:1.1.1"
+
+    //Glide Library
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //Circle Indicator
+    implementation 'me.relex:circleindicator:2.1.4'
+
+    //Currency and decimal
+    implementation 'me.abhinay.input:currency-edittext:1.1'
+
+
+    //Image Slider
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.0.7'
+
+
+
+    //Facebook Login
+    implementation 'com.facebook.android:facebook-android-sdk:8.0.0'
+
+    //Country Code
+    implementation 'com.hbb20:ccp:2.4.0'
+
+
+
+// Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
+
+    // Declare the dependencies for the Firebase Cloud Messaging and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
+    // Also declare the dependency for the Google Play services library and specify its version
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+
+
+    //Google sign in
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+
+
+    //Google sign in Button
+    implementation 'com.shobhitpuri.custombuttons:google-signin:1.1.0'
+
+
+    //Android OtpView PinView
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.1'
+    
+    //Loader
+    implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.4'
+
+    //Image picker
+    implementation 'com.github.nguyenhoanglam:ImagePicker:1.4.3'
+
+    //Mpesa Daraja
+    implementation 'com.androidstudy:daraja:1.0.2'
+
+    //Admob Ads
+    implementation 'com.google.android.gms:play-services-ads:19.7.0'
+
+    //circle image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation project(':nativetemplates')
+
+    //Chip navigation bar
+    implementation 'com.ismaeldivita.chipnavigation:chip-navigation-bar:1.3.4'
+
+
+    //Kotlin rate app
+    implementation 'com.google.android.play:core-ktx:1.8.1'
+    implementation 'com.google.android.play:core:1.9.1'
+
+    //gif
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
+
+
+}
+apply plugin: 'com.google.gms.google-services'

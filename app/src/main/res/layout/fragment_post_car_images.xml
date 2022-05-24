@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/top_shape_navigation"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        app:cardCornerRadius="10dp"
+                        android:background="@drawable/white_background"
+                        android:layout_margin="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="180dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_car_front" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/frontImage"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/textStyleCardViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:background="@drawable/layout_common_background"
+                                android:text="@string/front_image" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/frontImagePicker"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_add_white_24" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        app:cardCornerRadius="10dp"
+                        android:background="@drawable/white_background"
+                        android:layout_margin="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_car_right" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/rightImage"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                style="@style/textStyleCardViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:background="@drawable/layout_common_background"
+                                android:text="@string/right_side_image" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/rightImagePicker"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_add_white_24" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        app:cardCornerRadius="10dp"
+                        android:background="@drawable/white_background"
+                        android:layout_margin="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_car_left" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/leftImage"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                style="@style/textStyleCardViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:background="@drawable/layout_common_background"
+                                android:text="Left Side Image" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/leftImagePicker"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_add_white_24" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        app:cardCornerRadius="10dp"
+                        android:background="@drawable/white_background"
+                        android:layout_margin="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="190dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_car_rear" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/backImage"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                style="@style/textStyleCardViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:background="@drawable/layout_common_background"
+                                android:text="@string/back_image" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/backImagePicker"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_add_white_24" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        app:cardCornerRadius="10dp"
+                        android:background="@drawable/white_background"
+                        android:layout_margin="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="180dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_car_dashboard" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/dashBoardImage"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                style="@style/textStyleCardViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:background="@drawable/layout_common_background"
+                                android:text="@string/dashboard_image" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/dashBoardImagePicker"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_add_white_24" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        app:cardCornerRadius="10dp"
+                        android:background="@drawable/white_background"
+                        android:layout_margin="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_car_interior" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/interiorImage"
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                style="@style/textStyleCardViewTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:background="@drawable/layout_common_background"
+                                android:text="@string/interior_image" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/interiorImagePicker"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_add_white_24" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/selectMoreImagesButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/ic_add_white_24"
+                            android:text="@string/add_more_images" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/top_shape_navigation"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerview_more_images"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="@color/colorPrimaryTransparent"
+                    android:drawableEnd="@drawable/ic_file_upload_24"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/post_car"
+                    app:cornerRadius="5dp"
+                    app:strokeColor="@color/colorWhite" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="2dp"
+            android:padding="3dp"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+</FrameLayout>
+</layout>

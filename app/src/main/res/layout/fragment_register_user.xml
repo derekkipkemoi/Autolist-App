@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/auth_user_text_box_background">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_margin="10dp"
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.shobhitpuri.custombuttons.GoogleSignInButton
+                    android:id="@+id/google_sign_in"
+                    style="@style/textStyle"
+                    android:fontFamily="@font/montserrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:text="@string/register_with_google"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/facebook_login_hide"
+                        style="@style/textStyle"
+                        android:fontFamily="@font/montserrat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"
+                        facebook:com_facebook_login_text=""
+                        facebook:com_facebook_logout_text="" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/facebook_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:backgroundTint="@color/colorFacebook"
+                        android:padding="8dp"
+                        android:text="Register With Facebook"
+                        android:textAllCaps="false"
+                        facebook:icon="@drawable/ic_facebook_24" />
+
+                    <ProgressBar
+                        android:layout_margin="4dp"
+                        android:elevation="7dp"
+                        android:visibility="invisible"
+                        android:id="@+id/progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    app:layout_constraintTop_toBottomOf="@id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="12"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorWhite"
+                        android:layout_weight="3"/>
+
+                    <TextView
+                        style="@style/textStyleCardView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/or"
+                        android:layout_weight="6"
+                        android:textAlignment="center"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorWhite"
+                        android:layout_weight="3"/>
+
+                </LinearLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/register_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    style="@style/textStyle"
+                    android:padding="8dp"
+                    android:text="@string/register_with_email"
+                    android:textAllCaps="false" />
+                <LinearLayout
+                    app:layout_constraintTop_toBottomOf="@id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        style="@style/textStyleBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/already_registered"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/login"
+                        style="@style/textStyleCardView"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/log_in"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

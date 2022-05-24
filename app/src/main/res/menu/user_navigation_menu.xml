@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/active"
+        android:title="@string/active"
+        android:icon="@drawable/ic_approved"
+        app:cnb_iconColor="@color/greenColor"/>
+    <item
+        android:id="@+id/underReview"
+        android:title="@string/underReview"
+        android:icon="@drawable/ic_underreview"
+        app:cnb_iconColor="@color/warningYellow"/>
+    <item
+        android:id="@+id/declined"
+        android:title="@string/declined"
+        android:icon="@drawable/ic_declined"
+        app:cnb_iconColor="@color/warningColor"/>
+
+    <item
+        android:id="@+id/sold"
+        android:title="@string/sold"
+        android:icon="@drawable/ic_sold"
+        app:cnb_iconColor="@color/colorFacebook"/>
+</menu>

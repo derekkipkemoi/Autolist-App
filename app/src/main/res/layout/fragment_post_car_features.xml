@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/top_shape_navigation"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="@string/engine_size_cc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/carEngineSizeTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        app:errorIconDrawable="@null">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                           android:background="@drawable/white_background"
+                            style="@style/textStyleBlack"
+                            android:id="@+id/text_view_car_engine_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_engine_icon_24"
+                            android:hint="@string/enter_engine_size_cc"
+                            android:inputType="number"
+                            android:textStyle="bold" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="@string/mileage_kilometres" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/mileageTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorIconDrawable="@null">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:background="@drawable/white_background"
+                            android:id="@+id/edit_text_car_mileage"
+                            style="@style/textStyleBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:drawableEnd="@drawable/ic_distance_icon_24"
+                            android:hint="@string/enter_mileage_in_km"
+                            android:inputType="numberDecimal"
+                            android:textStyle="bold" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="@string/price_kenya_shillings"
+                        android:textColor="@color/colorWhite" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/priceTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:background="@drawable/white_background"
+                            android:id="@+id/edit_text_car_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="no"
+                            android:drawableEnd="@drawable/ic_money_icon_24"
+                            style="@style/textStyleBlack"
+                            android:hint="Enter Price in Ksh"
+                            android:inputType="number"
+                            android:textStyle="bold" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="@string/description" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/carDescriptionTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        app:errorIconDrawable="@null">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:background="@drawable/white_background"
+                            android:id="@+id/text_view_car_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:autofillHints=""
+                            style="@style/textStyleBlack"
+                            android:drawableEnd="@drawable/ic_text_24"
+                            android:hint="@string/enter_car_description"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLines="5"
+                            android:scrollHorizontally="false"
+                            android:textStyle="bold" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/priceNegotiableCheckBox"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:layout_margin="2dp"
+                        android:text="@string/price_is_negotiable" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/top_shape_navigation"
+                    android:orientation="vertical">
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/commonFeaturesButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:drawableEnd="@drawable/ic_add_white_24"
+                            android:text="@string/features"
+                            android:textAllCaps="true" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/extraFeaturesButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:drawableEnd="@drawable/ic_add_white_24"
+                            android:text="@string/more_features"
+                            android:textAllCaps="true" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

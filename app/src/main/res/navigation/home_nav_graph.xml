@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    android:label="Settings"
+    app:startDestination="@id/homeDashboardFragment">
+    <fragment
+        android:id="@+id/carDetailsFragment"
+        android:name="org.carlistingapp.autolist.ui.home.listCar.views.CarDetailsFragment"
+        android:label="Car Details"
+        tools:layout="@layout/fragment_car_details" />
+    <fragment
+        android:id="@+id/registerUserFragment"
+        android:name="org.carlistingapp.autolist.ui.auth.views.RegisterUserFragment"
+        tools:layout="@layout/fragment_register_user" />
+    <fragment
+        android:id="@+id/registerUserPhoneEmailFragment"
+        android:name="org.carlistingapp.autolist.ui.auth.views.RegisterUserPhoneEmailFragment"
+        tools:layout="@layout/fragment_register_user_phone_email"></fragment>
+    <fragment
+        android:id="@+id/userProfilePFragment"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.UserProfilePFragment"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.SettingsFragment"
+        android:label="Profile Settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/LogInUserFragment"
+        android:name="org.carlistingapp.autolist.ui.auth.views.LogInUserFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_log_in_user" />
+    <fragment
+        android:id="@+id/phoneNumberFragment"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.PhoneNumberFragment"
+        tools:layout="@layout/fragment_phone_number" />
+    <fragment
+        android:id="@+id/verifyPhoneCodeFragment"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.VerifyPhoneCodeFragment"
+        tools:layout="@layout/fragment_verify_phone_code" />
+    <fragment
+        android:id="@+id/userCarsFragment"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.UserCarsFragment"
+        android:label="Manage Ads"
+        tools:layout="@layout/fragment_user_cars" />
+    <fragment
+        android:id="@+id/userCarDetailsFragment"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.UserCarDetailsFragment"
+        android:label="User Car"
+        tools:layout="@layout/fragment_user_car_details" />
+    <fragment
+        android:id="@+id/searchCarFragment"
+        android:name="org.carlistingapp.autolist.ui.home.listCar.views.SearchCarFragment"
+        tools:layout="@layout/fragment_search_car" />
+    <fragment
+        android:id="@+id/indexFragment"
+        android:name="org.carlistingapp.autolist.ui.home.listCar.views.IndexFragment"
+        android:label="Moti"
+        tools:layout="@layout/fragment_index" />
+    <fragment
+        android:id="@+id/listCarFragment"
+        android:name="org.carlistingapp.autolist.ui.home.listCar.views.ListCarsFragment"
+        android:label="ListCarFragment"
+        tools:layout="@layout/fragment_list_cars" />
+    <fragment
+        android:id="@+id/viewImageFragment"
+        android:name="org.carlistingapp.autolist.ui.home.listCar.views.ViewImageFragment"
+        android:label="ViewImageFragment"
+        tools:layout="@layout/fragment_view_image" />
+    <fragment
+        android:id="@+id/featureCarFragment"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.FeatureCarFragment"
+        android:label="Feature Car"
+        tools:layout="@layout/fragment_feature_car" />
+    <fragment
+        android:id="@+id/verifyPaymentsFragmentDialog"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.VerifyPaymentsFragmentDialog"
+        android:label="VerifyPaymentsFragmentDialog"
+        tools:layout="@layout/fragment_verify_payments_dialog" />
+    <fragment
+        android:id="@+id/postCarDetailsFragment"
+        android:name="org.carlistingapp.autolist.ui.home.postCar.views.PostCarDetailsFragment"
+        android:label="PostCarDetailsFragment"
+        tools:layout="@layout/fragment_post_car_details" />
+    <fragment
+        android:id="@+id/editCarFragment"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.EditCarFragment"
+        android:label="EditCarFragment"
+        tools:layout="@layout/fragment_edit_car" />
+    <fragment
+        android:id="@+id/editUserProfileFragment"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.EditUserProfileFragment"
+        android:label="Update Profile"
+        tools:layout="@layout/fragment_edit_user_profile" />
+    <fragment
+        android:id="@+id/paymentsFragment"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.PaymentsFragment"
+        android:label="Made Payments"
+        tools:layout="@layout/fragment_payments" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="org.carlistingapp.autolist.ui.auth.views.ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/passwordResetFragment"
+        android:name="org.carlistingapp.autolist.ui.auth.views.PasswordResetFragment"
+        tools:layout="@layout/fragment_password_reset">
+        <argument
+            android:name="userId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="token"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="https://05caf0a46b6c.ngrok.io/resetpassword/{userId}/{token}" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordResetLinkSentFragment"
+        android:name="org.carlistingapp.autolist.ui.auth.views.PasswordResetLinkSentFragment"
+        tools:layout="@layout/fragment_password_reset_link_sent" />
+    <fragment
+        android:id="@+id/homeDashboardFragment"
+        android:name="org.carlistingapp.autolist.ui.home.listCar.views.HomeDashboardFragment"
+        android:label="fragment_home_dashboard"
+        tools:layout="@layout/fragment_home_dashboard" />
+    <fragment
+        android:id="@+id/termAndConditionsAndPrivacyPolicy"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.TermAndConditionsAndPrivacyPolicy"
+        tools:layout="@layout/fragment_term_and_conditions_and_privacy_policy" />
+    <fragment
+        android:id="@+id/viewUserFragment"
+        android:name="org.carlistingapp.autolist.ui.home.listCar.views.ViewUserDetails"
+        android:label="ViewUserFragment"
+        tools:layout="@layout/fragment_view_user_details" />
+    <fragment
+        android:id="@+id/favouriteCarsFragment"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.FavouriteCarsFragment"
+        android:label="Favourites"
+        tools:layout="@layout/fragment_favourite_cars" />
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="org.carlistingapp.autolist.ui.home.profile.views.ContactUsFragment"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact_us" />
+</navigation>

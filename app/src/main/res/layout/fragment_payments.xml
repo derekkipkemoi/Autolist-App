@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.home.profile.views.PaymentsFragment">
+
+    <FrameLayout
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:id="@+id/text"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_payment_made_yet"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <com.agrawalsuneet.dotsloader.loaders.PullInLoader
+        android:visibility="invisible"
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:pullin_bigCircleRadius="50dp"
+        app:pullin_dotsRadius="8dp"
+        app:pullin_useMultipleColors="true"
+        app:pullin_colorsArray="@array/rainbow"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

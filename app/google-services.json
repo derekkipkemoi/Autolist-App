@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "92238366680",
+    "project_id": "autolist-340709",
+    "storage_bucket": "autolist-340709.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92238366680:android:b3ae93b43db89979ad54ad",
+        "android_client_info": {
+          "package_name": "org.carlistingapp.autolist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92238366680-hbs6denh49a6v68d7kip1sgn803qmvph.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.carlistingapp.autolist",
+            "certificate_hash": "7f70c32eb7f00552594920ad9b52547a621b9916"
+          }
+        },
+        {
+          "client_id": "92238366680-iaq22aeid3pgkffpgre0l9bfnjoflgov.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.carlistingapp.autolist",
+            "certificate_hash": "96ddc06a036422ea18a6fd67958c20d57d486497"
+          }
+        },
+        {
+          "client_id": "92238366680-2nqrb4j840p8chqcjcg5971cp3cgjrca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALKzT8Q6jNtFZF01gejJeCDo0nmsxTFrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92238366680-2nqrb4j840p8chqcjcg5971cp3cgjrca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

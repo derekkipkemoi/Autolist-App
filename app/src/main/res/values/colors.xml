@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#25D366</color>
+    <color name="colorPrimaryDark">#FFF</color>
+    <color name="colorAccent">#164A43</color>
+    <color name="colorBanner">#8BC34A</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlackish">#000000</color>
+    <color name="colorBackgroundFeign">#F4F1F1</color>
+    <color name="colorPrimaryTransparent">#82000000</color>
+    <color name="colorFacebook">#4267B2</color>
+    <color name="goldColor">#FFD700</color>
+    <color name="silverColor">#D3D3D3</color>
+    <color name="bronzeColor">#cd7f32</color>
+    <color name="buttonDisabled">#5CBAB1</color>
+    <color name="warningColor">#F44336</color>
+    <color name="greenColor">#0FD629</color>
+    <color name="greenLight">#1A952A</color>
+    <color name="warningYellow">#FFC107</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#009688</color>
+</resources>

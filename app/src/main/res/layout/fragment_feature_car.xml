@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.profile.views.FeatureCarFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/textStyleProfileCardView"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/choose_package"/>
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/goldPackageLayout"
+                android:background="@drawable/top_shape_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/textStyleProfileCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/gold_package_name"
+                    android:textColor="@color/goldColor" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_gold"
+                    android:contentDescription="@string/icon" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    style="@style/textStyleProfileCardView"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prize_ksh_3_000_vat_included"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    style="@style/textStyle"
+                    android:textColor="@color/goldColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/goldText"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:backgroundTint="@color/colorPrimaryTransparent"
+                    android:drawableEnd="@drawable/ic_add_white_24"
+                    android:id="@+id/confirmGoldPackageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_gold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/silverPackageLayout"
+                android:visibility="gone"
+                android:background="@drawable/top_shape_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    style="@style/textStyleProfileCardView"
+                    android:textColor="@color/silverColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/silver_package_name"/>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_silver"
+                    android:contentDescription="@string/icon" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    style="@style/textStyleProfileCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prize_ksh_1500_vat_included"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    style="@style/textStyle"
+                    android:textColor="@color/silverColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/silverText"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:backgroundTint="@color/colorPrimaryTransparent"
+                    android:drawableEnd="@drawable/ic_add_white_24"
+                    android:id="@+id/confirmsilverPackageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_silver" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bronzePackageLayout"
+                android:visibility="gone"
+                android:background="@drawable/top_shape_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    style="@style/textStyleProfileCardView"
+                    android:textColor="@color/bronzeColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bronze_package_name"/>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_bronze"
+                    android:contentDescription="@string/icon" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    style="@style/textStyleProfileCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prize_ksh_900_vat_included"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    style="@style/textStyle"
+                    android:textColor="@color/bronzeColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bronzeText"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:backgroundTint="@color/colorPrimaryTransparent"
+                    android:drawableEnd="@drawable/ic_add_white_24"
+                    android:id="@+id/confirmBronzePackageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_bronze" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/freePackageLayout"
+                android:visibility="gone"
+                android:background="@drawable/top_shape_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    style="@style/textStyleProfileCardView"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/free_package_name"/>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_free"
+                    android:contentDescription="@string/icon" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    style="@style/textStyle"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/limited_ad_view"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:backgroundTint="@color/colorPrimaryTransparent"
+                    android:drawableEnd="@drawable/ic_add_white_24"
+                    android:id="@+id/confirmFreePackageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_free_package" />
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:id="@+id/goldPackageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/top_shape_navigation"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/content_description"
+                        android:src="@drawable/ic_gold" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/transmission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/gold_package"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:id="@+id/silverPackageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/top_shape_navigation"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/content_description"
+                        android:src="@drawable/ic_silver" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mileage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/silver_package"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:id="@+id/bronzePackageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/top_shape_navigation"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/content_description"
+                        android:src="@drawable/ic_bronze" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/fuel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/bronze_package"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:id="@+id/freePackageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/top_shape_navigation"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/content_description"
+                        android:src="@drawable/ic_free" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/engine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/free_package"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

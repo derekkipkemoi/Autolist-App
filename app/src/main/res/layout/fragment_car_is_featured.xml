@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:background="@drawable/bottom_shape_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textView_car_name"
+                    style="@style/textStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="CAR NAME"
+                    android:textSize="18sp">
+                </TextView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/top_shape_navigation"
+                    android:layout_margin="2dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/textStyleCardViewTitle"
+                        android:background="@drawable/layout_common_background"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center"
+                        android:gravity="start"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Car Has a Running Ad" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/packageName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:drawableStart="@drawable/ic_gold"
+                        android:gravity="start"
+                        style="@style/textStyle"
+                        android:text="@string/package_name"
+                        android:textAllCaps="true" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/prize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_money_icon_24"
+                        android:layout_gravity="center"
+                        android:gravity="start"
+                        android:textAllCaps="true"
+                        android:layout_margin="5dp"
+                        style="@style/textStyle"
+                        android:text="@string/prize"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/active_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="start"
+                        android:textAllCaps="true"
+                        android:layout_margin="5dp"
+                        style="@style/textStyle"
+                        android:text="@string/days"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:weightSum="2">
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_ok"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/colorPrimaryTransparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cornerRadius="5dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="OK"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:visibility="invisible"
+                android:layout_gravity="center"
+                android:id="@+id/progress_bar"
+                android:elevation="2dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</layout>
